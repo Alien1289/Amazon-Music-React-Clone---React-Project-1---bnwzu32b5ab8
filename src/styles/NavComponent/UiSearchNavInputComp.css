@@ -1,0 +1,34 @@
+*{
+    font-family: Roboto, Ember, Helvetica, Arial, "sans-serif";
+}
+
+#searchIcon-plus-inputBox{
+    background-color: rgb(255,255,255,0.2);
+    background-color: white;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#inputBox{
+    height: 18.4px;
+    border: none;
+    /* background-color: rgb(0, 0, 0,0); */
+    caret-color: rgb(37, 209, 218);
+    font-size: medium;
+    color: black;
+}
+#inputBox:hover{ 
+    cursor: pointer;
+}
+#inputBox:focus{
+    outline: none;
+}
+#inputBox::placeholder{
+    font-weight: 700;
+    /* color: rgba(255, 255, 255; */
+    color: grey;
+    opacity: 0.8;
+}

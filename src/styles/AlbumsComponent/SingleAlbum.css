@@ -1,0 +1,53 @@
+#Single-Album-img {
+    width: 100%;
+    height: 100%;
+}
+
+#SingleAlbum {
+    /* background-color: green; */
+    width: 166.85px;
+}
+
+#Single-Album-img-container {
+    width: 166.85px;
+    height: 166.85px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+#Single-Album-img-container-overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#Single-Album-info-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    padding-top: 8px;
+}
+
+#Single-Album-title-txt {
+    font-size: small;
+    font-weight: 600;
+}
+
+#Single-Album-title-txt:hover {
+    color: rgb(37, 209, 218);
+    cursor: pointer;
+}
+
+#Single-Album-arrtist-txt {
+    color: white;
+    width: 100%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    color: grey;
+    font-size: small;
+    margin-top: 8px;
+    font-weight: 600;
+}

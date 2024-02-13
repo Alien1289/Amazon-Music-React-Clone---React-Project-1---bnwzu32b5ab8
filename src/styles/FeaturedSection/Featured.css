@@ -1,0 +1,18 @@
+#filterValue-see-all-button {
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-weight: 700;
+    font-family: inherit;
+    outline: rgba(255, 255, 255);
+}
+
+#filterValue-see-all-button:hover{
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.5);
+}
