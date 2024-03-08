@@ -85,10 +85,10 @@ export function Featured(props) {
             <div id={`${props.filterValue}-area`} style={{display: 'flex', gap: '30px', position: 'absolute', top: '0', transition: '0.8s left ease', left: `${getAreaPosition}px` }} ref={refContentWidth}>
                 {getDisplayData.map(function (value, index) {
                         if (props.cardType === "song"){
-                            return (<SingleAlbum thumbnail={value.thumbnail} title={value.title} artists={value.artist}/>)
+                            return (<SingleAlbum value={value} setUrl = {props.setUrl}/>)
                         }else{
-                            return (<SingleAlbum thumbnail={value.image} title={value.title} artists={value.artists}/>)
-                        }   
+                            return (<SingleAlbum value={value}/>)
+                        }
                 })}
             </div>
         </div>

@@ -4,7 +4,6 @@
 }
 
 #SingleAlbum {
-    /* background-color: green; */
     width: 166.85px;
 }
 
@@ -50,4 +49,14 @@
     font-size: small;
     margin-top: 8px;
     font-weight: 600;
+}
+.icons-album{
+    cursor: pointer;
+}
+.icon-hover-color:hover{
+    color: #a8edf0;
+}
+.icon-play-hover-enlarge:hover{
+    scale: 1.1;
+    transition: scale 0.2s ease;
 }

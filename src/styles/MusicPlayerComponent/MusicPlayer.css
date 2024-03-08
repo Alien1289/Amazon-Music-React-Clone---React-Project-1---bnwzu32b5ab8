@@ -1,0 +1,14 @@
+#music-player{
+    width: 100vw;
+    height: 75px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    border-top: 3px solid rgba(255,255,255,0.2);
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

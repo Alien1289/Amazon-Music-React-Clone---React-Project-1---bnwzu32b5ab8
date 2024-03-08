@@ -4,17 +4,25 @@
     box-sizing: border-box;
     font-family: Ember, Helvetica, Arial, "sans-serif";
 }
-
 nav{
     height: 71.2px;
     width: 100%;
+    /* backdrop-filter: blur(10px); */
+    /* background-color: rgba(0, 0, 0, 0.5); */
     background-color: black;
     margin-bottom: 35px;
     padding-left: 24px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #nav-navlink-logo{
     height: 100%;
+    /* background-color: pink; */
 }
 
 #nav-logo-bigScreen{
@@ -28,8 +36,10 @@ nav{
     list-style-type: none;
     align-items: center;
     width: 70%;
+    /* background-color: red; */
     justify-content: space-between;
 }
+
 li a{
     color: white;
     text-decoration: none;    
@@ -50,16 +60,139 @@ li a:hover{
     align-items: center;
     justify-content: space-between;
     width: 580px;
+    /* background-color: blue; */
 }
+
+#myLibrary-container{
+    /* background-color: red; */
+    position: relative;
+}
+#myLibrary-modal{
+    width: 250px;
+    height: 140px;
+    backdrop-filter: blur(30px);
+    /* background-color: black; */
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    animation-name: scalingLibModal;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 10;
+    box-shadow: rgb(0, 0, 0) 5px 5px 5px 0px;
+}
+@keyframes scalingLibModal {
+    0%{
+        height: 0;
+    }50%{
+        height: 80px;
+    }
+    100%{
+        height: 160px;
+    }
+}
+#myLibrary-modal ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+
+#myLibrary-modal ul li{
+    width: 100%;
+    height: 60px;
+    padding: 15px 25px;
+    /* background-color: turquoise; */
+    /* border: 1px solid white; */
+}
+#myLibrary-modal ul li:hover{
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+}
+
 #nav-part2{
     height: 38%;
     display: flex;
     align-items: center;
     width: 325px;
     justify-content: space-between;
+    position: relative;
+    /* background-color: green; */
 }
-nav{
+#signIn-Modal{
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 325px;
+    height: 129px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    z-index: 10;
+    padding: 20px 10px 20px 10px;
+    border-radius: 8px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    box-shadow: rgb(0, 0, 0) 5px 5px 5px 0px;
+}
+#signIn-Modal-button{
+    width: 258.4px;
+    height: 39.2px;
+    background-color: rgb(37, 209, 218);
+    font-family: inherit;
+    border: 2px solid transparent;
+    padding: 10px 16px;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 300px;
+    cursor: pointer;
+    text-align: center;
+    /* outline: 1px solid #a8edf0; */
+}
+#signIn-Modal-button:hover{
+    background-color: #a8edf0;
+    scale: 1.05;
+}
+#signIn-Modal-button:active{
+    scale: 1;
+    background-color: rgb(37, 209, 218);
+    opacity: 0.4;
+
+}
+
+@media (max-width:965px){
+    
+    #nav-part2{
+        width: 75%;
+        /* background-color: pink; */
+    }
+    #nav-links-tray{
+        width: 100%;
+    }
+    #nav-part1{
+        width: fit-content;
+    }
+}
+@media (max-width:725px){
+    #myLibrary-modal{
+        left: -600%;
+    }
+}
+@media (max-width:377px){
+    #signIn-Modal{
+        width: 200px
+    }
+    #signIn-Modal-button{
+        width: 160px;
+    }
 }

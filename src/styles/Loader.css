@@ -1,0 +1,26 @@
+#loader-container{
+    color: aqua;
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    position:fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transform-origin: center center; 
+    animation-name: loaderAnimation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes loaderAnimation {
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+
+    }to{
+        transform: translate(-50%, -50%) rotate(360deg);
+
+    }
+}

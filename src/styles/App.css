@@ -1,4 +1,10 @@
 body{
     background-color: black;
     color: white;
+    z-index: -1;
+}
+
+.App{
+    padding-top: 90px;
+    /* padding-bottom: 90px; */
 }

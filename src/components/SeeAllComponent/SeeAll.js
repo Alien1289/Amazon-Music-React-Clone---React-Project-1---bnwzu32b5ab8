@@ -2,8 +2,9 @@ import { useEffect, useState } from "react"
 import { SingleAlbum } from "../AlbumsComponent/SingleAlbum"
 import '../../styles/SeeAllComponent/SeeAll.css'
 import { useParams } from "react-router-dom"
+import { Loader } from "../Loader"
 
-export function SeeAll() {
+export function SeeAll(props) {
     const projectId = "bnwzu32b5ab8"
     const [getDisplayData, setDisplayData] = useState([])
     const {cardType, filterKey, filterValue} = useParams()
@@ -24,15 +25,15 @@ export function SeeAll() {
         setDisplayData((prev) => [...prev, ...dataBase.data])
     }
 
-    return (<div id="seeAll-container">
-        <div id="seeAll-grid">
+    return (<div id="seeAll-container" style={{position:'relative'}}>
+        {getDisplayData.length > 0 ?  <div id="seeAll-grid">
             {getDisplayData.map(function (value, index) {
                 if (cardType === "song") {
-                    return (<SingleAlbum thumbnail={value.thumbnail} title={value.title} artists={value.artist} />)
+                    return (<SingleAlbum value={value} setUrl = {props.setUrl}/>)
                 } else {
-                    return (<SingleAlbum thumbnail={value.image} title={value.title} artists={value.artists} />)
+                    return (<SingleAlbum value={value} />)
                 }
             })}
-        </div>
+        </div>  : <Loader/>}
     </div>)
 }

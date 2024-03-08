@@ -1,9 +1,11 @@
 #seeAll-container{
     margin-top: 80px;
-    margin-bottom: 3px; 
+    /* margin-bottom: 3px;  */
     padding-left: 3%;
     padding-right: 2%;
     width: 100%;
+    /* background-color: green; */
+    min-height: calc(100vh - 80px);
 }
 
 #seeAll-grid{
@@ -11,4 +13,5 @@
     grid-template-columns: repeat(auto-fill, 166.85px);
     /* background-color: red; */
     gap: 30px;
+    justify-content: center;
 }
